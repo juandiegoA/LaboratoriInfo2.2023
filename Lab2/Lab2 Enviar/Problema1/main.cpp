@@ -45,59 +45,59 @@ int main()
 }
 //-----------------------------------------------------------------------------------------------------------------------
 //Codigo en Arduino
-/*int X,A;
-void setup()
-{
+/*void setup() {
   Serial.begin(9600);
 }
-
-void loop()
-{
-  Serial.println("Introdusca la cantidad de cambio: ");
-  X=Serial.read();
-
-  A=X/50000;
-  X=X%50000;
-  Serial.print("50000: ");
+void loop() {
+  Serial.println("Este programa entrega la cantidad de dinero billetes y monedas que se deben entregar");
+  Serial.print("Ingrese la cantidad de dinero a devolver: ");
+  int X, A;
+  while (!Serial.available()) {
+    // Wait for user input
+  }
+  X = Serial.parseInt();
+  A = X / 50000;
+  X = X % 50000;
+  Serial.print("$50000: ");
   Serial.println(A);
-  A=X/20000;
-  X=X%20000;
-  Serial.print("20000: ");
+  A = X / 20000;
+  X = X % 20000;
+  Serial.print("$20000: ");
   Serial.println(A);
-  A=X/10000;
-  X=X%10000;
-  Serial.print("10000: ");
+  A = X / 10000;
+  X = X % 10000;
+  Serial.print("$10000: ");
   Serial.println(A);
-  A=X/5000;
-  X=X%5000;
-  Serial.print("5000: ");
+  A = X / 5000;
+  X = X % 5000;
+  Serial.print("$5000: ");
   Serial.println(A);
-  A=X/2000;
-  X=X%2000;
-  Serial.print("2000: ");
+  A = X / 2000;
+  X = X % 2000;
+  Serial.print("$2000: ");
   Serial.println(A);
-  A=X/1000;
-  X=X%1000;
-  Serial.print("1000: ");
+  A = X / 1000;
+  X = X % 1000;
+  Serial.print("$1000: ");
   Serial.println(A);
-  A=X/500;
-  X=X%500;
-  Serial.print("500: ");
+  A = X / 500;
+  X = X % 500;
+  Serial.print("$500: ");
   Serial.println(A);
-  A=X/200;
-  X=X%200;
-  Serial.print("200: ");
+  A = X / 200;
+  X = X % 200;
+  Serial.print("$200: ");
   Serial.println(A);
-  A=X/100;
-  X=X%100;
-  Serial.print("100: ");
+  A = X / 100;
+  X = X % 100;
+  Serial.print("$100: ");
   Serial.println(A);
-  A=X/50;
-  X=X%50;
-  Serial.print("50: ");
+  A = X / 50;
+  X = X % 50;
+  Serial.print("$50: ");
   Serial.println(A);
   Serial.print("Faltante: ");
   Serial.println(X);
-  delay(10000);
+  delay(1000);
 }
 */
